@@ -14,6 +14,6 @@ export class NumberGroup implements ISortable {
   swap(leftPost: number, rightPos: number): void {
     let tempLeft = this.data[leftPost];
     tempLeft = this.data[rightPos];
-    this.data[rightPos] = this.data[leftPost];
+    this.data[rightPos] = tempLeft;
   }
 }
