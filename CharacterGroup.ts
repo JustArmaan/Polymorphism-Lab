@@ -1,6 +1,6 @@
 import { ISortable } from "./ISortable";
 
-class CharecterGroup implements ISortable{
+export class CharecterGroup implements ISortable{
     data: string;
     constructor (data: string){
         this.data = data;
