@@ -29,7 +29,16 @@ class Node {
     // Should return number of Nodes in List
     get length(): number {
       // implement this part yourself
-
+      let n = 0;
+      if (!this.head) {
+        return n;
+      } 
+      let node: Node | null = this.head;
+      while (node) {
+        n = n + 1
+        node = node.next;
+      }
+      return n;
     }
   
    // Convenience method that returns a Node at a given index
@@ -51,6 +60,7 @@ class Node {
   
     compare(leftPos: number, rightPos: number): boolean {
       // Implement this part yourself
+      return this.at(leftPos).data > this.at(rightPos).data;
     }
   
     swap(leftPos: number, rightPos: number): void {
@@ -68,3 +78,8 @@ class Node {
       }
     }
   }
+
+  const l1 = new LinkedListGroup()
+  l1.add(1)
+  l1.add(2)
+  console.log(l1.length)
